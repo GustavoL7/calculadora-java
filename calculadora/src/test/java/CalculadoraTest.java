@@ -41,4 +41,22 @@ public class CalculadoraTest {
         Calculadora calc = new Calculadora();
         assertEquals(5, calc.subtrair(5, 0));
     }
+    
+    @Test
+    void testMultiplicarNumerosPositivos() {
+        Calculadora calc = new Calculadora();
+        assertEquals(15, calc.multiplicar(3, 5));
+    }
+
+    @Test
+    void testMultiplicarNumerosNegativos() {
+        Calculadora calc = new Calculadora();
+        assertEquals(15, calc.multiplicar(-3, -5));
+    }
+
+    @Test
+    void testMultiplicarPorZero() {
+        Calculadora calc = new Calculadora();
+        assertEquals(0, calc.multiplicar(3, 0));
+    }
 }
