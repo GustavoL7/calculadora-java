@@ -41,7 +41,7 @@ public class CalculadoraTest {
         Calculadora calc = new Calculadora();
         assertEquals(5, calc.subtrair(5, 0));
     }
-    
+
     @Test
     void testMultiplicarNumerosPositivos() {
         Calculadora calc = new Calculadora();
@@ -58,5 +58,23 @@ public class CalculadoraTest {
     void testMultiplicarPorZero() {
         Calculadora calc = new Calculadora();
         assertEquals(0, calc.multiplicar(3, 0));
+    }
+
+    @Test
+    void testDividirNumerosPositivos() {
+        Calculadora calc = new Calculadora();
+        assertEquals(2, calc.dividir(10, 5));
+    }
+
+    @Test
+    void testDividirNumerosNegativos() {
+        Calculadora calc = new Calculadora();
+        assertEquals(2, calc.dividir(-10, -5));
+    }
+
+    @Test
+    void testDividirPorZeroDeveLancarExcecao() {
+        Calculadora calc = new Calculadora();
+        assertThrows(ArithmeticException.class, () -> calc.dividir(10, 0));
     }
 }
