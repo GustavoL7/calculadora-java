@@ -23,4 +23,22 @@ public class CalculadoraTest {
         Calculadora calc = new Calculadora();
         assertEquals(5, calc.somar(0, 5));
     }
+
+    @Test
+    void testSubtrairNumerosPositivos() {
+        Calculadora calc = new Calculadora();
+        assertEquals(2, calc.subtrair(5, 3));
+    }
+
+    @Test
+    void testSubtrairNumerosNegativos() {
+        Calculadora calc = new Calculadora();
+        assertEquals(-2, calc.subtrair(-5, -3));
+    }
+
+    @Test
+    void testSubtrairComZero() {
+        Calculadora calc = new Calculadora();
+        assertEquals(5, calc.subtrair(5, 0));
+    }
 }
